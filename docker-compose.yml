@@ -6,12 +6,7 @@ services:
     container_name: api
     ports:
       - 8080:8080
-    environment:
-      - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=yourpassword
-      - POSTGRES_DB=mydb
-      - POSTGRES_HOST=postgres
-      - POSTGRES_PORT=5432
+    env_file: ./.env
     depends_on:
       - postgres
       - redis
@@ -21,10 +16,7 @@ services:
   postgres:
     image: postgres:16
     container_name: postgres
-    environment:
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: yourpassword
-      POSTGRES_DB: mydb
+    env_file: ./.env
     ports:
       - 5433:5432
     volumes:
