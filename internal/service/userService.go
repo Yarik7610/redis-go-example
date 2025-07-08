@@ -3,8 +3,8 @@ package service
 import (
 	"errors"
 
-	"github.com/Yarik7610/redis-learning/internal/model"
-	"github.com/Yarik7610/redis-learning/internal/repository"
+	"github.com/Yarik7610/redis-go-example/internal/model"
+	"github.com/Yarik7610/redis-go-example/internal/repository"
 	"github.com/gin-gonic/gin"
 )
 

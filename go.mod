@@ -1,4 +1,4 @@
-module github.com/Yarik7610/redis-learning
+module github.com/Yarik7610/redis-go-example
 
 go 1.24.4
 

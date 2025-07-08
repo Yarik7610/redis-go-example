@@ -4,7 +4,7 @@ import (
 	"database/sql"
 	"errors"
 
-	"github.com/Yarik7610/redis-learning/internal/model"
+	"github.com/Yarik7610/redis-go-example/internal/model"
 )
 
 // Тут работает с БД нашей, пишем наши CRUD базовые запросы, которые будет потом переиспользовать в сервисе

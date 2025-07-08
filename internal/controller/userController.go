@@ -4,7 +4,7 @@ import (
 	"net/http"
 	"strconv"
 
-	"github.com/Yarik7610/redis-learning/internal/service"
+	"github.com/Yarik7610/redis-go-example/internal/service"
 	"github.com/gin-gonic/gin"
 )
 

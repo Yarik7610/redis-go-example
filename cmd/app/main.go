@@ -3,10 +3,10 @@ package main
 import (
 	"log"
 
-	"github.com/Yarik7610/redis-learning/internal/config"
-	"github.com/Yarik7610/redis-learning/internal/controller"
-	"github.com/Yarik7610/redis-learning/internal/repository"
-	"github.com/Yarik7610/redis-learning/internal/service"
+	"github.com/Yarik7610/redis-go-example/internal/config"
+	"github.com/Yarik7610/redis-go-example/internal/controller"
+	"github.com/Yarik7610/redis-go-example/internal/repository"
+	"github.com/Yarik7610/redis-go-example/internal/service"
 	"github.com/gin-gonic/gin"
 )
 
