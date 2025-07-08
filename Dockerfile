@@ -15,4 +15,4 @@ RUN chmod +x wait-for-it.sh
 
 EXPOSE 8080
 
-CMD ["./wait-for-it.sh", "postgres:5433", "--timeout=60", "--", "./main"]
+CMD ["./wait-for-it.sh", "postgres:5432", "--timeout=60", "--", "./main"]
