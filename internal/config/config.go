@@ -34,8 +34,6 @@ func NewConfig() *Config {
 		log.Fatalf("Init redis error: %v", err)
 	}
 
-	log.Println("CONNECTED TO REDIS SUCCESFULLY")
-
 	return &Config{
 		DB:          db,
 		RedisClient: redisClient,
