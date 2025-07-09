@@ -15,7 +15,7 @@ func main() {
 	defer cfg.Close()
 
 	userRepo := repository.NewUserRepository(cfg.DB)
-	userService := service.NewUserService(userRepo)
+	userService := service.NewUserService(userRepo, cfg.RedisClient)
 	userController := controller.NewUserController(userService)
 
 	r := gin.Default()

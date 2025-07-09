@@ -72,13 +72,12 @@ func initRedis() (*redis.Client, error) {
 		return nil, errors.New("Missing required Redis environment variables")
 	}
 
-	ctx := context.Background()
 	redisClient := redis.NewClient(&redis.Options{
 		Addr:     fmt.Sprintf("%s:%s", redisHost, redisPort),
 		Password: redisPassword,
 		DB:       0,
 	})
-	if err := redisClient.Ping(ctx).Err(); err != nil {
+	if err := redisClient.Ping(context.Background()).Err(); err != nil {
 		return nil, err
 	}
 

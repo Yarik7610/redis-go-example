@@ -3,6 +3,7 @@ package repository
 import (
 	"database/sql"
 	"errors"
+	"time"
 
 	"github.com/Yarik7610/redis-go-example/internal/model"
 )
@@ -30,6 +31,8 @@ func (ur *userRepository) Save(user *model.User) error {
 
 func (ur *userRepository) GetById(id int) (*model.User, error) {
 	var user model.User
+	// Задержка нужна для имитиации долгой работы, чтобы в postman увидеть разницу в раннере наглядно
+	time.Sleep(100 * time.Millisecond)
 	query := "SELECT id, name, email FROM users WHERE id = $1"
 	err := ur.db.QueryRow(query, id).Scan(&user.ID, &user.Name, &user.Email)
 	if errors.Is(err, sql.ErrNoRows) {
